@@ -5,19 +5,23 @@ import java.util.ArrayList;
 public class Ficha {
 	private Aluno aluno;
 	private Aluno numeroMatricula;
+	private Personal personal;
 	private ArrayList<Exercicio> exercicios;
 	private char sexo;
+	private String dataFim;
 
 
-	public Ficha(Aluno aluno, ArrayList<Exercicio> exercicios, char sexo) {
+	public Ficha(Aluno aluno, ArrayList<Exercicio> exercicios, char sexo, Personal personal) {
 		this.aluno = aluno;
-		this.exercicios = exercicios;
+		this.personal = personal;
+		this.exercicios = new ArrayList<>();
 		this.sexo = sexo;
 	}
 
 	public Ficha(Aluno aluno ,char sexo){
 		this.aluno = aluno;
-		this.exercicios = exercicios;
+		this.personal = new Personal();
+		this.exercicios = new ArrayList<>();
 		this.sexo = sexo;
 	}
 
@@ -62,4 +66,15 @@ public class Ficha {
 				", sexo=" + sexo +
 				'}';
 	}
+
+	public void adicionarExercicios(Exercicio exercicio){
+		return exercicios.add(exercicio);
+
+	}
+
+	public void removerExercicios(Exercicio exercicio){
+		return exercicios.remove(exercicio);
+
+	}
+
 }
