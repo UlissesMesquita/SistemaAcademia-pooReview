@@ -68,11 +68,11 @@ public class Ficha {
 	}
 
 	public void adicionarExercicios(Exercicio exercicio){
-		return exercicios.add(exercicio);
+		//return exercicios.add(exercicio);
 	}
 
 	public void removerExercicios(Exercicio exercicio){
-		return exercicios.remove(exercicio);
+		//return exercicios.remove(exercicio);
 	}
 
 }
